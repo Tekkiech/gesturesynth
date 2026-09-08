@@ -1,0 +1,23 @@
+name: GestureSynth
+options:
+  bundleIdPrefix: com.isaacolukanni
+  createIntermediateGroups: true
+targets:
+  GestureSynth:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: GestureSynth
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.isaacolukanni.gesturesynth
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "6.0"
+        ENABLE_HARDENED_RUNTIME: false
+        GENERATE_INFOPLIST_FILE: true
+        INFOPLIST_KEY_NSCameraUsageDescription: "Gesture Synth uses your camera to track hand gestures and turn them into music."
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.music
+        INFOPLIST_KEY_NSHumanReadableCopyright: ""
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
