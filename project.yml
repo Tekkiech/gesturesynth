@@ -21,3 +21,27 @@ targets:
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.music
         INFOPLIST_KEY_NSHumanReadableCopyright: ""
         MACOSX_DEPLOYMENT_TARGET: "14.0"
+  GestureSynthTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: GestureSynthTests
+    settings:
+      base:
+        SWIFT_VERSION: "6.0"
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+        GENERATE_INFOPLIST_FILE: true
+    dependencies:
+      - target: GestureSynth
+schemes:
+  GestureSynth:
+    build:
+      targets:
+        GestureSynth: all
+        GestureSynthTests: [test]
+    test:
+      targets:
+        - GestureSynthTests
+    run:
+      config: Debug

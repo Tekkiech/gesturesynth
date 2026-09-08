@@ -10,28 +10,47 @@
 		101B43EDE8D59B2AE0107203 /* CameraCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BAC8D8BD9F532393B3CF41 /* CameraCapture.swift */; };
 		1690BEB000A0CB7C9F4FCA45 /* GestureSynthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79AB0B025746F96EDB75E5E /* GestureSynthController.swift */; };
 		2103841EA57D45F29FAEB41E /* SynthEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535BB806ECE8174ABA9643BC /* SynthEngine.swift */; };
+		29F95F23CFF89337E0E90E7B /* ChordStateStabilizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1587DB0A994FFA8AB406F9D1 /* ChordStateStabilizerTests.swift */; };
 		2F0B7F79A60970493D6DF875 /* GestureSynthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB81E3EA4FEBD6F60430FA /* GestureSynthApp.swift */; };
+		359C4D5DDC1D53FCB0D0CF25 /* TestHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4D11275BFE8C88B03FDEA /* TestHand.swift */; };
 		39CBAFFD482A360B100FB3BA /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA6EAE26276C7221E0C9C5 /* CameraPreviewView.swift */; };
 		53F508F2F20A829255D4404E /* HandTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30798F2947730FC5320C607 /* HandTracker.swift */; };
 		9330229EEE0D42F4C818B145 /* ChordStateStabilizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3991E88C5AA6331247E5C /* ChordStateStabilizer.swift */; };
 		952D4271A6D5B6D6F75E602F /* LandmarkSmoother.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56518F33AA1EF7FAC3A7CD /* LandmarkSmoother.swift */; };
 		A2A589635224B537EA3DED5C /* GestureLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DA375FB6EF53E85D5C803A /* GestureLogic.swift */; };
+		ABBC9DD9C32DC08145AC231E /* GestureLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB520B4863F02B2AD2CEA9B /* GestureLogicTests.swift */; };
 		AD1341CEBF45CCBD141C498C /* SpectrumVisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AEFA3F2CE74D3230995C7E /* SpectrumVisualizerView.swift */; };
 		CE5AAFDFFD69239F3EFCA04C /* ChordEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4E8C6010A0E075A26CF94 /* ChordEngine.swift */; };
+		D5157E3867DA04D742305202 /* ChordEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781F9B061512293ACD56474F /* ChordEngineTests.swift */; };
 		D8A17699C01B0C28DBFA9D81 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20102C3FE01551C2AF376E62 /* ContentView.swift */; };
 		EF3EB4ABACE6CF691E2D228A /* AudioSpectrumAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E77034CE6F9FD12AAAE14 /* AudioSpectrumAnalyzer.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C31C6C6553A06075FF1AB457 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D325B7163E636C9C40FD37F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8E3DEAF6397D5DCB42FAE6A;
+			remoteInfo = GestureSynth;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		01B3991E88C5AA6331247E5C /* ChordStateStabilizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordStateStabilizer.swift; sourceTree = "<group>"; };
 		0A56518F33AA1EF7FAC3A7CD /* LandmarkSmoother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkSmoother.swift; sourceTree = "<group>"; };
+		1587DB0A994FFA8AB406F9D1 /* ChordStateStabilizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordStateStabilizerTests.swift; sourceTree = "<group>"; };
 		20102C3FE01551C2AF376E62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29DA33C181324819360A751E /* GestureSynth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureSynth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB520B4863F02B2AD2CEA9B /* GestureLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureLogicTests.swift; sourceTree = "<group>"; };
 		2FB4E8C6010A0E075A26CF94 /* ChordEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordEngine.swift; sourceTree = "<group>"; };
 		39DA375FB6EF53E85D5C803A /* GestureLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureLogic.swift; sourceTree = "<group>"; };
+		40F4D11275BFE8C88B03FDEA /* TestHand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHand.swift; sourceTree = "<group>"; };
 		535BB806ECE8174ABA9643BC /* SynthEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthEngine.swift; sourceTree = "<group>"; };
 		63BAC8D8BD9F532393B3CF41 /* CameraCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCapture.swift; sourceTree = "<group>"; };
+		781F9B061512293ACD56474F /* ChordEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordEngineTests.swift; sourceTree = "<group>"; };
 		7D1E77034CE6F9FD12AAAE14 /* AudioSpectrumAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpectrumAnalyzer.swift; sourceTree = "<group>"; };
+		8C6967BCA9136EA97CC008D3 /* GestureSynthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureSynthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAA6EAE26276C7221E0C9C5 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
 		BFFB81E3EA4FEBD6F60430FA /* GestureSynthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureSynthApp.swift; sourceTree = "<group>"; };
 		D5AEFA3F2CE74D3230995C7E /* SpectrumVisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrumVisualizerView.swift; sourceTree = "<group>"; };
@@ -44,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				3C03FF14A78865472E4796AC /* GestureSynth */,
+				A01ADAB1FEC381E94300A0C2 /* GestureSynthTests */,
 				B0E5987852BF6D1F5343FB0F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,10 +88,22 @@
 			path = GestureSynth;
 			sourceTree = "<group>";
 		};
+		A01ADAB1FEC381E94300A0C2 /* GestureSynthTests */ = {
+			isa = PBXGroup;
+			children = (
+				781F9B061512293ACD56474F /* ChordEngineTests.swift */,
+				1587DB0A994FFA8AB406F9D1 /* ChordStateStabilizerTests.swift */,
+				2BB520B4863F02B2AD2CEA9B /* GestureLogicTests.swift */,
+				40F4D11275BFE8C88B03FDEA /* TestHand.swift */,
+			);
+			path = GestureSynthTests;
+			sourceTree = "<group>";
+		};
 		B0E5987852BF6D1F5343FB0F /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				29DA33C181324819360A751E /* GestureSynth.app */,
+				8C6967BCA9136EA97CC008D3 /* GestureSynthTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +111,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B1A32916CE3ABA93FCCD9542 /* GestureSynthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CFA697B0B60F2E3EA6CCF6B /* Build configuration list for PBXNativeTarget "GestureSynthTests" */;
+			buildPhases = (
+				854BF6B0BDE5048CF2086D46 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C526C9595CFAAB8DB302F713 /* PBXTargetDependency */,
+			);
+			name = GestureSynthTests;
+			packageProductDependencies = (
+			);
+			productName = GestureSynthTests;
+			productReference = 8C6967BCA9136EA97CC008D3 /* GestureSynthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E8E3DEAF6397D5DCB42FAE6A /* GestureSynth */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A22CB1A65E47C1E8448E5C99 /* Build configuration list for PBXNativeTarget "GestureSynth" */;
@@ -122,6 +172,7 @@
 			projectRoot = "";
 			targets = (
 				E8E3DEAF6397D5DCB42FAE6A /* GestureSynth */,
+				B1A32916CE3ABA93FCCD9542 /* GestureSynthTests */,
 			);
 		};
 /* End PBXProject section */
@@ -147,9 +198,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		854BF6B0BDE5048CF2086D46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5157E3867DA04D742305202 /* ChordEngineTests.swift in Sources */,
+				29F95F23CFF89337E0E90E7B /* ChordStateStabilizerTests.swift in Sources */,
+				ABBC9DD9C32DC08145AC231E /* GestureLogicTests.swift in Sources */,
+				359C4D5DDC1D53FCB0D0CF25 /* TestHand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C526C9595CFAAB8DB302F713 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8E3DEAF6397D5DCB42FAE6A /* GestureSynth */;
+			targetProxy = C31C6C6553A06075FF1AB457 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2084F52BC34EB7860FA08807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.isaacolukanni.GestureSynthTests;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GestureSynth.app/Contents/MacOS/GestureSynth";
+			};
+			name = Debug;
+		};
 		3F496CF80E049BE474E2A054 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -170,6 +259,25 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.isaacolukanni.gesturesynth;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		5B6BB03AD6F2052E28E00916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.isaacolukanni.GestureSynthTests;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GestureSynth.app/Contents/MacOS/GestureSynth";
 			};
 			name = Release;
 		};
@@ -316,6 +424,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8CFA697B0B60F2E3EA6CCF6B /* Build configuration list for PBXNativeTarget "GestureSynthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2084F52BC34EB7860FA08807 /* Debug */,
+				5B6BB03AD6F2052E28E00916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		A22CB1A65E47C1E8448E5C99 /* Build configuration list for PBXNativeTarget "GestureSynth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
