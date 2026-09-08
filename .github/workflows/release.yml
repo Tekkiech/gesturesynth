@@ -19,6 +19,11 @@ jobs:
         with:
           xcode-version: latest-stable
 
+      - name: Run tests
+        run: |
+          xcodebuild test -project GestureSynth.xcodeproj -scheme GestureSynth \
+            -destination 'platform=macOS'
+
       # No paid Apple Developer account in the loop, so this is ad-hoc signed
       # rather than Developer-ID signed + notarized. It runs fine, but macOS
       # will flag it as "from an unidentified developer" on first launch since
