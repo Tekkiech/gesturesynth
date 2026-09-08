@@ -2,7 +2,8 @@
 
 A camera-based instrument. Your left hand picks the chord, your right hand controls voicing and volume. This is a native macOS rewrite of [ericwei97-cloud/gesture-synth](https://github.com/ericwei97-cloud/gesture-synth), which ran the same idea in a browser with MediaPipe and Web Audio. This version uses Apple's Vision framework for hand tracking, accelerated by the Neural Engine on Apple Silicon, and AVAudioEngine for the synth itself.
 
-![Control scheme: left hand picks the chord, right hand shapes it](docs/control-scheme.svg)
+![Control scheme: left hand picks the chord, right hand shapes it](docs/control-scheme-light.svg#gh-light-mode-only)
+![Control scheme: left hand picks the chord, right hand shapes it](docs/control-scheme-dark.svg#gh-dark-mode-only)
 
 ## Requirements
 

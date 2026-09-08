@@ -1,0 +1,128 @@
+<svg viewBox="0 0 920 620" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --panel: #f6f8fa;
+      --border: #d0d7de;
+      --text: #1f2328;
+      --muted: #57606a;
+      --left: #c9781f;
+      --left-bg: #fbeee0;
+      --right: #0f8b9e;
+      --right-bg: #e0f4f7;
+    }
+    text { fill: var(--text); }
+    .title { font-size: 26px; font-weight: 700; }
+    .subtitle { font-size: 14px; fill: var(--muted); }
+    .panel-title { font-size: 20px; font-weight: 700; }
+    .panel-sub { font-size: 13px; fill: var(--muted); }
+    .row-label { font-size: 14px; font-weight: 600; }
+    .row-detail { font-size: 13px; fill: var(--muted); }
+    .badge-text { font-size: 13px; font-weight: 700; }
+    .badge-text-sm { font-size: 10px; font-weight: 700; }
+  </style>
+
+  <rect x="0" y="0" width="920" height="620" fill="var(--bg)" />
+
+  <text x="40" y="42" class="title">GestureSynth controls</text>
+  <text x="40" y="64" class="subtitle">Left hand picks the chord. Right hand shapes it.</text>
+
+  <!-- Left hand panel -->
+  <rect x="40" y="90" width="410" height="490" rx="16" fill="var(--panel)" stroke="var(--border)" />
+  <circle cx="70" cy="128" r="8" fill="var(--left)" />
+  <text x="90" y="133" class="panel-title">Left hand</text>
+  <text x="70" y="156" class="panel-sub">chord select</text>
+
+  <g transform="translate(70,178)">
+    <rect x="0" y="0" width="36" height="36" rx="8" fill="var(--left-bg)" stroke="var(--left)" />
+    <text x="18" y="24" text-anchor="middle" class="badge-text" fill="var(--left)">1</text>
+    <text x="52" y="16" class="row-label">Index finger up</text>
+    <text x="52" y="33" class="row-detail">Scale degree I</text>
+  </g>
+  <g transform="translate(70,224)">
+    <rect x="0" y="0" width="36" height="36" rx="8" fill="var(--left-bg)" stroke="var(--left)" />
+    <text x="18" y="24" text-anchor="middle" class="badge-text" fill="var(--left)">2</text>
+    <text x="52" y="16" class="row-label">+ middle finger</text>
+    <text x="52" y="33" class="row-detail">Scale degree II</text>
+  </g>
+  <g transform="translate(70,270)">
+    <rect x="0" y="0" width="36" height="36" rx="8" fill="var(--left-bg)" stroke="var(--left)" />
+    <text x="18" y="24" text-anchor="middle" class="badge-text" fill="var(--left)">3</text>
+    <text x="52" y="16" class="row-label">+ ring finger</text>
+    <text x="52" y="33" class="row-detail">Scale degree III</text>
+  </g>
+  <g transform="translate(70,316)">
+    <rect x="0" y="0" width="36" height="36" rx="8" fill="var(--left-bg)" stroke="var(--left)" />
+    <text x="18" y="24" text-anchor="middle" class="badge-text" fill="var(--left)">4</text>
+    <text x="52" y="16" class="row-label">+ pinky</text>
+    <text x="52" y="33" class="row-detail">Scale degree IV</text>
+  </g>
+  <g transform="translate(70,362)">
+    <rect x="0" y="0" width="36" height="36" rx="8" fill="var(--left-bg)" stroke="var(--left)" />
+    <text x="18" y="24" text-anchor="middle" class="badge-text" fill="var(--left)">5</text>
+    <text x="52" y="16" class="row-label">+ thumb (full hand)</text>
+    <text x="52" y="33" class="row-detail">Scale degree V</text>
+  </g>
+  <g transform="translate(70,408)">
+    <rect x="0" y="0" width="36" height="36" rx="8" fill="var(--left-bg)" stroke="var(--left)" />
+    <text x="18" y="22" text-anchor="middle" class="badge-text-sm" fill="var(--left)">I+P</text>
+    <text x="52" y="16" class="row-label">Index + pinky (thumb tucked)</text>
+    <text x="52" y="33" class="row-detail">Scale degree VI</text>
+  </g>
+  <g transform="translate(70,454)">
+    <rect x="0" y="0" width="36" height="36" rx="8" fill="var(--left-bg)" stroke="var(--left)" />
+    <text x="18" y="22" text-anchor="middle" class="badge-text-sm" fill="var(--left)">+T</text>
+    <text x="52" y="16" class="row-label">Index + pinky + thumb</text>
+    <text x="52" y="33" class="row-detail">Scale degree VII</text>
+  </g>
+
+  <line x1="70" y1="512" x2="410" y2="512" stroke="var(--border)" />
+  <text x="70" y="540" class="row-label">Tilt hand left / right</text>
+  <text x="240" y="540" class="row-detail">Major / minor</text>
+
+  <!-- Right hand panel -->
+  <rect x="470" y="90" width="410" height="490" rx="16" fill="var(--panel)" stroke="var(--border)" />
+  <circle cx="500" cy="128" r="8" fill="var(--right)" />
+  <text x="520" y="133" class="panel-title">Right hand</text>
+  <text x="500" y="156" class="panel-sub">voicing &amp; expression</text>
+
+  <g transform="translate(500,178)">
+    <rect x="0" y="0" width="36" height="36" rx="8" fill="var(--right-bg)" stroke="var(--right)" />
+    <text x="18" y="24" text-anchor="middle" class="badge-text" fill="var(--right)">1</text>
+    <text x="52" y="16" class="row-label">Index finger up</text>
+    <text x="52" y="33" class="row-detail">Root position</text>
+  </g>
+  <g transform="translate(500,224)">
+    <rect x="0" y="0" width="36" height="36" rx="8" fill="var(--right-bg)" stroke="var(--right)" />
+    <text x="18" y="24" text-anchor="middle" class="badge-text" fill="var(--right)">2</text>
+    <text x="52" y="16" class="row-label">+ middle finger</text>
+    <text x="52" y="33" class="row-detail">First inversion</text>
+  </g>
+  <g transform="translate(500,270)">
+    <rect x="0" y="0" width="36" height="36" rx="8" fill="var(--right-bg)" stroke="var(--right)" />
+    <text x="18" y="24" text-anchor="middle" class="badge-text" fill="var(--right)">3</text>
+    <text x="52" y="16" class="row-label">+ ring finger</text>
+    <text x="52" y="33" class="row-detail">7th chord</text>
+  </g>
+  <g transform="translate(500,316)">
+    <rect x="0" y="0" width="36" height="36" rx="8" fill="var(--right-bg)" stroke="var(--right)" />
+    <text x="18" y="24" text-anchor="middle" class="badge-text" fill="var(--right)">4</text>
+    <text x="52" y="16" class="row-label">+ pinky</text>
+    <text x="52" y="33" class="row-detail">Dominant / diminished 7th</text>
+  </g>
+
+  <line x1="500" y1="378" x2="840" y2="378" stroke="var(--border)" />
+
+  <g transform="translate(500,400)">
+    <text x="0" y="0" class="row-label">Hand height</text>
+    <text x="160" y="0" class="row-detail">Volume</text>
+  </g>
+  <g transform="translate(500,434)">
+    <text x="0" y="0" class="row-label">Thumb extended</text>
+    <text x="160" y="0" class="row-detail">Drop one octave</text>
+  </g>
+  <g transform="translate(500,468)">
+    <text x="0" y="0" class="row-label">Tilt left / right</text>
+    <text x="160" y="0" class="row-detail">Filter sweep</text>
+  </g>
+</svg>
