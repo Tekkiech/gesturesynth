@@ -1,13 +1,20 @@
 import AVFoundation
 import os
 
-enum Waveform {
-    case sine, triangle, square, sawtooth
+enum Waveform: CaseIterable, Hashable {
+    case triangle, sawtooth, square
+
+    /// Matches the original web app's toneSelect labels exactly.
+    var displayName: String {
+        switch self {
+        case .triangle: return "Warm Synth"
+        case .sawtooth: return "Bright Synth"
+        case .square: return "Retro Synth"
+        }
+    }
 
     func sample(phase: Double) -> Double {
         switch self {
-        case .sine:
-            return sin(2 * .pi * phase)
         case .triangle:
             return 2 * abs(2 * (phase - floor(phase + 0.5))) - 1
         case .square:
@@ -53,6 +60,7 @@ final class Voice {
 
     private let frequencyBox = Box<Double>(220)
     private let activeBox = Box<Bool>(false)
+    private let waveformBox: Box<Waveform>
 
     var frequency: Double {
         get { frequencyBox.value }
@@ -62,10 +70,16 @@ final class Voice {
         get { activeBox.value }
         set { activeBox.value = newValue }
     }
+    var waveform: Waveform {
+        get { waveformBox.value }
+        set { waveformBox.value = newValue }
+    }
 
     init(sampleRate: Double, waveform: Waveform) {
         let frequencyBox = self.frequencyBox
         let activeBox = self.activeBox
+        let waveformBox = Box<Waveform>(waveform)
+        self.waveformBox = waveformBox
         var phase: Double = 0
 
         let format = AVAudioFormat(standardFormatWithSampleRate: sampleRate, channels: 1)!
@@ -76,6 +90,7 @@ final class Voice {
 
             let freq = frequencyBox.value
             let active = activeBox.value
+            let waveform = waveformBox.value
 
             for frame in 0..<Int(frameCount) {
                 if active {
@@ -106,7 +121,7 @@ final class SynthEngine {
     private var currentKey: String?
 
     // Matches the original web app's default "Warm Synth" (toneSelect's selected option).
-    private let waveform: Waveform = .triangle
+    private let initialWaveform: Waveform = .triangle
 
     /// Spectrum bands (0-1 magnitude each) for the corner visualizer, tapped
     /// straight off the actual final output — silent when the master volume is.
@@ -119,7 +134,7 @@ final class SynthEngine {
         let hwSampleRate = engine.outputNode.outputFormat(forBus: 0).sampleRate
         let sampleRate = hwSampleRate > 0 ? hwSampleRate : 44100
 
-        voices = (0..<4).map { _ in Voice(sampleRate: sampleRate, waveform: waveform) }
+        voices = (0..<4).map { _ in Voice(sampleRate: sampleRate, waveform: initialWaveform) }
 
         let band = lowpass.bands[0]
         band.filterType = .resonantLowPass
@@ -195,6 +210,17 @@ final class SynthEngine {
             } else {
                 voice.isActive = false
             }
+        }
+    }
+
+    /// Live-updates every voice's oscillator shape. Unlike the original,
+    /// which had to force a retrigger (`synth.currentKey = null`) since a Web
+    /// Audio OscillatorNode's type is fixed at creation, each voice here reads
+    /// its waveform fresh every render callback, so this is audible on the
+    /// very next buffer with no retrigger needed.
+    func setWaveform(_ waveform: Waveform) {
+        for voice in voices {
+            voice.waveform = waveform
         }
     }
 }

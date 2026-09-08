@@ -31,6 +31,38 @@ private let handConnections: [(Int, Int)] = [
     (5, 9), (9, 13), (13, 17),
 ]
 
+/// Key and waveform pickers, matching the original's `keySelect`/`toneSelect`
+/// (same top-left placement, same options).
+private struct KeyAndToneControls: View {
+    @Binding var selectedKey: MusicalKey
+    @Binding var selectedWaveform: Waveform
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Picker("Key", selection: $selectedKey) {
+                ForEach(musicalKeys) { key in
+                    Text(key.displayName).tag(key)
+                }
+            }
+            .labelsHidden()
+            .frame(width: 140)
+
+            Picker("Tone", selection: $selectedWaveform) {
+                ForEach(Waveform.allCases, id: \.self) { waveform in
+                    Text(waveform.displayName).tag(waveform)
+                }
+            }
+            .labelsHidden()
+            .frame(width: 140)
+        }
+        .pickerStyle(.menu)
+        .padding(12)
+        .background(.black.opacity(0.4))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .foregroundStyle(.white)
+    }
+}
+
 struct ContentView: View {
     @StateObject private var controller = GestureSynthController()
 
@@ -86,6 +118,8 @@ struct ContentView: View {
 
             VStack {
                 HStack {
+                    KeyAndToneControls(selectedKey: $controller.selectedKey, selectedWaveform: $controller.selectedWaveform)
+                        .padding(24)
                     Spacer()
                     SpectrumVisualizerView(bands: controller.spectrumBands, chordState: controller.visualizerState)
                         .padding(24)

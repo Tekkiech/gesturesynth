@@ -15,6 +15,7 @@
 		359C4D5DDC1D53FCB0D0CF25 /* TestHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F4D11275BFE8C88B03FDEA /* TestHand.swift */; };
 		39CBAFFD482A360B100FB3BA /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA6EAE26276C7221E0C9C5 /* CameraPreviewView.swift */; };
 		53F508F2F20A829255D4404E /* HandTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30798F2947730FC5320C607 /* HandTracker.swift */; };
+		5D027F3A2B0F2D31CE880A56 /* MusicalKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9C041DBEAFBB2E0904D824 /* MusicalKey.swift */; };
 		9330229EEE0D42F4C818B145 /* ChordStateStabilizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3991E88C5AA6331247E5C /* ChordStateStabilizer.swift */; };
 		952D4271A6D5B6D6F75E602F /* LandmarkSmoother.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56518F33AA1EF7FAC3A7CD /* LandmarkSmoother.swift */; };
 		A2A589635224B537EA3DED5C /* GestureLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DA375FB6EF53E85D5C803A /* GestureLogic.swift */; };
@@ -52,6 +53,7 @@
 		7D1E77034CE6F9FD12AAAE14 /* AudioSpectrumAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSpectrumAnalyzer.swift; sourceTree = "<group>"; };
 		8C6967BCA9136EA97CC008D3 /* GestureSynthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureSynthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAA6EAE26276C7221E0C9C5 /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		BB9C041DBEAFBB2E0904D824 /* MusicalKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicalKey.swift; sourceTree = "<group>"; };
 		BFFB81E3EA4FEBD6F60430FA /* GestureSynthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureSynthApp.swift; sourceTree = "<group>"; };
 		D5AEFA3F2CE74D3230995C7E /* SpectrumVisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrumVisualizerView.swift; sourceTree = "<group>"; };
 		E30798F2947730FC5320C607 /* HandTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandTracker.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				F79AB0B025746F96EDB75E5E /* GestureSynthController.swift */,
 				E30798F2947730FC5320C607 /* HandTracker.swift */,
 				0A56518F33AA1EF7FAC3A7CD /* LandmarkSmoother.swift */,
+				BB9C041DBEAFBB2E0904D824 /* MusicalKey.swift */,
 				D5AEFA3F2CE74D3230995C7E /* SpectrumVisualizerView.swift */,
 				535BB806ECE8174ABA9643BC /* SynthEngine.swift */,
 			);
@@ -193,6 +196,7 @@
 				1690BEB000A0CB7C9F4FCA45 /* GestureSynthController.swift in Sources */,
 				53F508F2F20A829255D4404E /* HandTracker.swift in Sources */,
 				952D4271A6D5B6D6F75E602F /* LandmarkSmoother.swift in Sources */,
+				5D027F3A2B0F2D31CE880A56 /* MusicalKey.swift in Sources */,
 				AD1341CEBF45CCBD141C498C /* SpectrumVisualizerView.swift in Sources */,
 				2103841EA57D45F29FAEB41E /* SynthEngine.swift in Sources */,
 			);

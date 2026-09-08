@@ -53,6 +53,7 @@ The `.xcodeproj` is generated from `project.yml` and checked in, so you only nee
 
 - **Left hand.** Finger count picks the scale degree: 1 to 5 fingers for I through V, index plus pinky for VI, add the thumb for VII. Tilt the hand left or right to switch between major and minor.
 - **Right hand.** Height sets the volume. Finger count picks the voicing, root position through first inversion, a 7th, or a dominant/diminished 7th. Thumb out drops it an octave. Tilt sweeps the filter.
+- **Key and tone pickers**, top left, set which key you're playing in and the oscillator waveform (Warm Synth, Bright Synth, or Retro Synth). Switching either takes effect immediately, no need to replay a chord.
 
 ## How it works
 
@@ -66,7 +67,6 @@ The synth itself is a small AVAudioEngine graph: up to four oscillator voices, a
 
 - Hand roles are inferred from screen position, not true handedness. Works fine for normal playing, breaks if you cross your hands.
 - Not notarized (see Gatekeeper above).
-- Key and waveform are fixed at A and a triangle wave. The original had pickers for both; this rewrite hasn't added the UI for it yet.
 
 ## Credits
 

@@ -41,14 +41,17 @@ final class GestureSynthController: ObservableObject {
 
     var cameraSession: AVCaptureSession { pipeline.cameraSession }
 
+    /// Key picker, matching the original's `keySelect`.
+    @Published var selectedKey: MusicalKey = defaultMusicalKey
+
+    /// Waveform picker, matching the original's `toneSelect`.
+    @Published var selectedWaveform: Waveform = .triangle {
+        didSet { synth.setWaveform(selectedWaveform) }
+    }
+
     private let pipeline = CaptureAndTrackingPipeline()
     private let stabilizer = ChordStateStabilizer()
     private let synth = SynthEngine()
-
-    // v1 hardcoded defaults, matching the original web app's default <select> values
-    // (key/waveform pickers are an explicit follow-up, not part of this pass).
-    private let tonicFreq: Double = 220.00 // A
-    private let keyName = "A"
 
     func start() {
         synth.onSpectrum = { [weak self] bands in
@@ -114,7 +117,7 @@ final class GestureSynthController: ObservableObject {
             synth.updateFilterSweep(tiltFactor: tilt)
 
             if let currentChord, qualityIndex >= 1 {
-                let tones = getChordTones(currentChord, isMajorMode: isMajorMode, tonicFreq: tonicFreq)
+                let tones = getChordTones(currentChord, isMajorMode: isMajorMode, tonicFreq: selectedKey.tonicFreq)
                 var notes = getSolidNotes(tones, rightHandCount: qualityIndex, isMajorMode: isMajorMode)
                 if thumbDown {
                     notes = notes.map { $0 / 2 }
@@ -135,7 +138,7 @@ final class GestureSynthController: ObservableObject {
 
     private func updateDisplay(currentChord: String?, isMajorMode: Bool, qualityIndex: Int, thumbDown: Bool) {
         if let currentChord {
-            let chordName = getChordName(currentChord, isMajorMode: isMajorMode, keyName: keyName)
+            let chordName = getChordName(currentChord, isMajorMode: isMajorMode, keyName: selectedKey.keyName)
             chordDisplayText = "\(chordName)(\(currentChord))"
         } else {
             chordDisplayText = "--"
